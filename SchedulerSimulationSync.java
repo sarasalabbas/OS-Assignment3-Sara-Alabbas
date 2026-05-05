@@ -37,45 +37,42 @@ class SharedResources {
     public static long totalWaitingTime = 0;       // Shared accumulator - NEEDS PROTECTION!
     public static List<String> executionLog = new ArrayList<>();  // Shared list - NEEDS PROTECTION!
     
-    // TODO #1: Add a ReentrantLock(s) here to protect critical sections
-    public static final ReentrantLock counterLock = new ReentrantLock();
+    public static final ReentrantLock contextSwitchLock = new ReentrantLock();
+    public static final ReentrantLock completedProcessLock = new ReentrantLock();
+    public static final ReentrantLock waitingTimeLock = new ReentrantLock();
     public static final ReentrantLock logLock = new ReentrantLock();
-
-    // TODO #2: Add a Semaphore to limit concurrent process execution
     public static final Semaphore cpuSemaphore = new Semaphore(1);
+
+    
 
     // Method to increment context switch counter
     public static void incrementContextSwitch() {
-        // TODO: Protect this critical section with a lock
-        counterLock.lock();
-         try {
-        contextSwitchCount++;}   
-        finally {
-        counterLock.unlock();
-    }
-        
+        contextSwitchLock.lock();
+        try {
+            contextSwitchCount++;
+        } finally {
+            contextSwitchLock.unlock();
+        }
     }
     
     // Method to increment completed process counter
     public static void incrementCompletedProcess() {
-        // TODO: Protect this critical section with a lock
-        counterLock.lock();
+        completedProcessLock.lock();
         try {
-        completedProcessCount++;
-    } finally {
-        counterLock.unlock();
-    }
+            completedProcessCount++;
+        } finally {
+            completedProcessLock.unlock();
+        }
     }
     
     // Method to add waiting time
     public static void addWaitingTime(long time) {
-        // TODO: Protect this critical section with a lock
-        counterLock.lock();
-    try {
-        totalWaitingTime += time;
-    } finally {
-        counterLock.unlock();
-    }
+        waitingTimeLock.lock();
+        try {
+            totalWaitingTime += time;
+        } finally {
+            waitingTimeLock.unlock();
+        }
     }
     
     // Method to log execution
