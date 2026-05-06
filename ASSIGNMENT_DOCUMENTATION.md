@@ -100,7 +100,7 @@ I ran the program several times and compared the results to confirm consistent b
 20 minutes
 ---
 
-### Entry 5 - [May 6, 2026 - 10:00 PM]
+### Entry 5 - [May 6, 2026 - 9:15 PM]
 **What I implemented**: 
 Completed the assignment documentation and prepared the video demonstration requirements.
 
@@ -371,13 +371,13 @@ I would explain synchronization as a way to organize threads so they do not inte
 
 **Repository URL**: https://github.com/sarasalabbas/OS-Assignment3-Sara-Alabbas
 
-**Number of commits**: 
+**Number of commits**: 4
 
 **Commit messages**: 
-1. 
-2. 
-3. 
-4. 
+1. Set my student ID
+2. Add synchronization using locks and semaphore
+3. Improve synchronization with fine-grained locks
+4. Completed assignment documentation and final testing
 
 ---
 
