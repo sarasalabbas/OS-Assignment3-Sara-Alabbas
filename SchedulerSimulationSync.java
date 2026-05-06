@@ -212,6 +212,7 @@ public void run() {
         long waitingTime = (completionTime - creationTime) - burstTime;
         SharedResources.addWaitingTime(waitingTime);
         SharedResources.incrementCompletedProcess();
+        SharedResources.logExecution(name + " completed execution");
         
         System.out.println(Colors.BRIGHT_GREEN + "  ✓ " + Colors.BOLD + Colors.CYAN + name + 
                           Colors.RESET + Colors.BRIGHT_GREEN + " finished execution!" + Colors.RESET);
