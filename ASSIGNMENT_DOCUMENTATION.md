@@ -2,7 +2,7 @@
 
 **Student Name**: Sarah Saad Alabbas
 **Student ID**: 444052644   
-**Date Submitted**: 6 May 2026
+**Date Submitted**: 7 May 2026
 
 ---
 
@@ -14,9 +14,9 @@
 > Set sharing to "Anyone with the link can view".
 > Test the link in incognito/private mode before submitting.
 
-**Video Link**: [Paste your personal Gmail Google Drive link here]
+**Video Link**: https://drive.google.com/file/d/1pyY-8LCAA9GKPlWAW-F3epO5yXX2gRJd/view?usp=drivesdk
 
-**Video filename**: `[YourStudentID]_Assignment3_Synchronization.mp4`
+**Video filename**: `444052644_Assignment3_Synchronization.mp4`
 
 **Verification**:
 - [ ] Link is accessible (tested in incognito mode)
